@@ -5,7 +5,7 @@
         <h2 class="title is-capitalized has-text-white">{{ name }}</h2>
       </div>
       <div class="column is-12">
-        <div class="columns is-mobile is-gapless" style="overflow:scroll;">
+        <div class="columns is-mobile is-gapless">
           <div
             v-for="img in imgs"
             :key="img.id"
