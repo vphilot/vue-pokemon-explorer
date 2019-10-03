@@ -1,4 +1,4 @@
-# vue-pokemon-evolution
+# vue-pokemon-explorer
 
 ## Project setup
 ```
