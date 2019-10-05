@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+
+body *, input {
+    font-display: swap;
+    font-family: 'Space Mono', monospace;
+}
+
+@media screen and (max-width:768px) {
+ .level-item {
+  justify-content: flex-start;
+ }
+}

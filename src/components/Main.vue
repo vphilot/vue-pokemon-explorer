@@ -12,10 +12,10 @@
           v-bind:types="this.result.types"
         ></PokemonCard>
         <!-- << pokemon card -->
-        <!-- main component >> -->
-        <div class="box">
-          <h1 class="title">Welcome to Pokémon Explorer!</h1>
-          <div class="level is-mobile">
+            <!-- main component >> -->
+        <div class="section">
+          <h1 class="title is-4">Welcome to Pokémon Explorer!</h1>
+          <div class="level">
             <div class="level-left">
               <div class="level-item">
                 <label for="search">Look for a Pokémon:</label>
@@ -35,9 +35,9 @@
           </div>
           <b-loading :is-full-page="true" :active.sync="isLoading" :can-cancel="true"></b-loading>
           <div class="container">
-            <div class="columns is-multiline is-gapless">
+            <div class="columns is-multiline is-mobile is-gapless">
               <div
-                class="column is-3-desktop is-3-tablet is-12-mobile"
+                class="column is-3-desktop is-3-tablet is-6-mobile"
                 v-for="pokemon in limitedFilteredPokemonList"
                 :key="pokemon.id"
               >
@@ -50,7 +50,7 @@
           </div>
         </div>
         <!-- << main component -->
-        <!--  footer >> -->
+         <!--  footer >> -->
         <div class="container">
           <p class="has-text-centered is-size-7">powered by <a href="https://pokeapi.co/" target="_blank">PokéAPI</a> and <a href="https://vuejs.org/" target="_blank">Vue</a>, developed by <a href="https://philot.space/" target="_blank">Philot</a></p>
         </div>
@@ -69,9 +69,8 @@ export default {
     PokemonCard
   },
   props: {
-    msg: String
-  },
 
+  },
   data() {
     return {
       term: "wobbuffet",
@@ -134,13 +133,16 @@ export default {
     },
 
     transferSelectedSuggestion(term) {
-      console.log(term);
+      // console.log(term);
       const self = this;
       this.term = term;
       this.searchPokemon();
     },
 
     searchPokemon() {
+      if(screen.width <= 768) {
+        window.scrollTo(0,0);
+      }
       this.isLoading = true;
       const self = this;
       //if empty, do nothing

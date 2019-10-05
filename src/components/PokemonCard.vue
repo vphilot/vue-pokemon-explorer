@@ -18,21 +18,21 @@
         </div>
       </div>
       <div class="column is-3-desktop is-3-tablet is-6-mobile">
-        <h3 class="title is-4 has-text-white">Weight</h3>
+        <h3 class="title is-5 has-text-white">Weight</h3>
         <p class="tag">{{ weight }}</p>
       </div> 
       <div class="column is-3-desktop is-3-tablet is-6-mobile">
-        <h3 class="title is-4 has-text-white">Height</h3>
+        <h3 class="title is-5 has-text-white">Height</h3>
         <p class="tag">{{ height }}</p>
       </div>
       <div class="column is-3-desktop is-3-tablet is-6-mobile">
-        <h3 class="title is-4 has-text-white">Abilities</h3>
+        <h3 class="title is-5 has-text-white">Abilities</h3>
         <div class="tags">
           <p class="tag" v-for="ability in abilities" :key="ability.id">{{ ability.ability.name }}</p>
         </div>
       </div>
       <div class="column is-3-desktop is-3-tablet is-6-mobile">
-        <h3 class="title is-4 has-text-white">Type</h3>
+        <h3 class="title is-5 has-text-white">Type</h3>
         <div class="tags">
           <p class="tag" v-for="type in types" :key="type.id">{{ type.type.name }}</p>
         </div>
