@@ -126,9 +126,8 @@ export default {
 
     updateSuggestionsList() {
       const self = this;
-      const regexp = new RegExp(this.getTerm, "i");
       this.filteredPokemonList = this.pokemonList.filter(item =>
-        item.name.includes(this.getTerm)
+        item.name.includes(this.getTerm.toLowerCase())
       );
     },
 
@@ -152,7 +151,7 @@ export default {
         return;
       }
       //if there's a term, fetch the api
-      fetch(`https://pokeapi.co/api/v2/pokemon/${this.getTerm}`)
+      fetch(`https://pokeapi.co/api/v2/pokemon/${(this.getTerm).toLowerCase()}`)
         .then(response => {
           if (response.status !== 200) {
             console.log(
